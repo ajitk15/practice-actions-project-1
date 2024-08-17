@@ -9,7 +9,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
       - name: Install Dependencies
-        uses: npm install
+        run: npm install
       - name: Lint script
         run: npm run lint
   test:
@@ -20,7 +20,7 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
       - name: Install Dependencies
-        uses: npm install
+        run: npm install
       - name: test script
         run: npm test
   deploy:
@@ -31,6 +31,6 @@ jobs:
       - name: Install NodeJS
         uses: actions/setup-node@v4
       - name: Install Dependencies
-        uses: npm install
+        run: npm install
       - name: Deployment
         run: echo "Dploying..."
